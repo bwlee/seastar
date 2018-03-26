@@ -28,10 +28,10 @@ if [ "$ID" = "ubuntu" ] || [ "$ID" = "debian" ]; then
         add-apt-repository -y ppa:ubuntu-toolchain-r/test
         apt-get -y update
     fi
-    apt-get install -y ninja-build ragel libhwloc-dev libnuma-dev libpciaccess-dev libcrypto++-dev libboost-all-dev libxml2-dev xfslibs-dev libgnutls28-dev liblz4-dev libsctp-dev gcc make libprotobuf-dev protobuf-compiler python3 libunwind8-dev systemtap-sdt-dev libtool cmake libyaml-cpp-dev
+    apt-get install -y ninja-build ragel libhwloc-dev libnuma-dev libpciaccess-dev libcrypto++-dev libboost-all-dev libxml2-dev xfslibs-dev libgnutls28-dev liblz4-dev libsctp-dev gcc-7 make libprotobuf-dev protobuf-compiler python3 libunwind8-dev systemtap-sdt-dev libtool cmake libyaml-cpp-dev
     if [ "$ID" = "ubuntu" ]; then
-        apt-get install -y g++-5
-        echo "g++-5 is installed for Seastar. To build Seastar with g++-5, specify '--compiler=g++-5' on configure.py"
+        apt-get install -y g++-7
+        echo "g++-7 is installed for Seastar. To build Seastar with g++-7, specify '--compiler=g++-7' on configure.py"
     else # debian
         apt-get install -y g++
     fi
