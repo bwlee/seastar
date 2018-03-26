@@ -7,8 +7,8 @@ Installing required packages:
 sudo ./install-dependencies.sh
 ```
 
-To compile Seastar explicitly using gcc 5, use:
+Now, only g++-7 supported, to compile Seastar explicitly using gcc 7, use:
 ```
-./configure.py --compiler=g++-5
+./configure.py --compiler=g++-7
 ninja
 ```
